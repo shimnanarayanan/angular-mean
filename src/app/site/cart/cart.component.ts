@@ -92,10 +92,10 @@ export class CartComponent implements OnInit {
       (res: any) => {
         // this.cartService.setCartData(res.data);
         this.cartInfo = res.data;
-        let currentUrl = this.route.url;
-        this.route.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-          this.route.navigate([currentUrl]);
-        });
+        // let currentUrl = this.route.url;
+        // this.route.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+        //   this.route.navigate([currentUrl]);
+        // });
         // this.toastr()
       },
       (err: HttpErrorResponse) => {

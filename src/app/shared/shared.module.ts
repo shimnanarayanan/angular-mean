@@ -20,7 +20,7 @@ import { ProductListComponent } from './product-list/product-list.component';
   ],
   exports: [
     HeaderComponent,
-    ProductListComponent
+    ProductListComponent,
   ]
 })
 export class SharedModule { }

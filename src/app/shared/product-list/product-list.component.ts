@@ -16,7 +16,6 @@ export class ProductListComponent implements OnInit {
   price: any = 0;
   constructor(
     private generalService: GeneralService,
-  
     private router: Router
   ) {
     
@@ -50,7 +49,7 @@ export class ProductListComponent implements OnInit {
          
         },
         (err: HttpErrorResponse) => {
-          // this.toastr.error(err.error.message[this.currentLanguage]);
+          // this.toastr.error(err.error.message);
         }
       );
     
