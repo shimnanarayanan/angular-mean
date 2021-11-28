@@ -1,0 +1,49 @@
+<app-header ></app-header>>
+
+<section class="blog p-t-0 section-b-space">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="title1 section-t-space">
+            <h2 class="title-inner1">ANTIQUES Details</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div>
+           
+              <div class="col-md-12">
+              
+                <div class="blog-details">
+                 
+                    <img src="assets/antique/images4.jpg" class="img-fluid" alt="">
+                    <h1>{{productInfo.name}}</h1>
+                    <h2>{{productInfo.description}}</h2>
+                    <h2>{{productInfo.price}}</h2>
+                 
+                  <input type="text" name="quantity" class="form-control input-number" [(ngModel)]="quantity" />
+
+                  <!-- <hr class="style1">
+                  <h6> {{ 'by:' +blog.by}} , {{ '2 Comment' }}</h6> -->
+                  <div>
+                    <button class="btn btn-primary" (click)="addToCart()">Add to Cart</button><br>
+                    <button class="btn btn-primary" (click)="buyNow()">Buy Now</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <div>
+                <button (click)="addToWishlist()">
+                  <i class="fa fa-heart"></i>
+                  <span class="title-font">Add To WishList</span>
+                </button>
+              </div>
+           
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </section>

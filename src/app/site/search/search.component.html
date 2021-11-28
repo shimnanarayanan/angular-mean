@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="tav_menu_wrapper">
+    <!-- <form action="https://www.mowneh.com/search" method="post" accept-charset="utf-8"> -->
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9">
+          <div class="tab_menu shop_menu ">
+            <input type="text" [(ngModel)]="searchKey" placeholder="Search keyword">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="tab_menu shop_menu">
+                <button type="button" class="btn-btn primary" (click)="searchNow()">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </form> -->
+  </div>
+  <h4 *ngIf="searchList.length==0">No result found as per your search</h4>
+ <div>
+  <div class="row" *ngIf="dataLoaded">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" *ngFor="let product of searchList">
+      <app-product-list [productItem]='product'></app-product-list>
+    </div>
+ </div>
+ 

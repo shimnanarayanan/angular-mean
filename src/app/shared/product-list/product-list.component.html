@@ -1,0 +1,33 @@
+<div class="single__product">
+    <div class="single_product__inner">
+      <div class="product_img">
+      
+        <a [routerLink]="['/product/'+productItem._id]"  >
+            <img src="assets/antique/images4.jpg" class="img-fluid" alt="">
+        </a>
+      </div>
+      <div class="product__content text-center">
+        <div class="produc_desc_info">
+          <div class="product_title">
+            <h4><a [routerLink]="['/product/'+productItem._id]">{{productItem.name}}</a></h4>
+          </div>
+          <div class="product_price" >
+            <p>{{productItem.price }}</p>
+          </div>
+         
+        </div>
+        <div class="product__hover">
+         
+           
+
+            <button class="button" (click)="addToCart(productItem)">Add to Cart</button><br>
+            <button class="btn btn-primary" (click)="addToWishlist(productItem)">Add to wishList</button>
+         
+          <!-- <ul *ngIf="productItem?.outofStock">
+            <li>{{'Out of Stock' | translate}} </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,19 @@
+.error-msg{
+    color: #ff0000;
+  }
+  .error-input{
+    border: 1px #ff0000 solid;
+  }
+  .register_page_form form input{
+    margin-bottom: 4px;
+  }
+  .input_text{
+    margin-bottom: 10px;
+  }
+  .register-page .theme-card .theme-form input{
+    margin-bottom: 10px;
+  }
+  .mb-20{
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,25 @@
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">ANTIQUE COLLECTIONS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li> <a [routerLink]="['/cart']"><i class="fa fa-shopping-basket" aria-hidden="true"></i>Cart</a></li>
+       
+        <li> <a [routerLink]="['/myaccount/wishlist']"><i class="fa fa-shopping-basket" aria-hidden="true"></i>WishList</a></li>
+        <li> <a [routerLink]="['/login']"> Login</a></li>
+        <li> <a [routerLink]="['/register']">Register</a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-lg-3 search_box search_box_two" style="padding: 10px 15px;">
+      <div class="search_inner search_two">
+        <form method="post">
+          <input type="text" name="search" placeholder="Search" [(ngModel)]="searchKey" (keyup.enter)="searchNow()">
+          <button type="button" (click)="searchNow()">Search<i class="ion-ios-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>

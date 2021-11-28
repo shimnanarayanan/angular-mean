@@ -1,0 +1,36 @@
+<app-header></app-header>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="title1 section-t-space">
+            <h2 class="title-inner1">ANTIQUES</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <app-blog [services]="featuredServices"></app-blog> -->
+          <div *ngFor="let product of featuredServices">
+           
+              <div class="col-md-6">
+                <!-- <a [routerLink]="'/pages/blog/details'"> -->
+                
+                <!-- </a> -->
+                <div class="blog-details">
+                  
+                    <img src="assets/antique/images4.jpg" class="img-fluid" alt="">
+                    <h1>{{product.name}}</h1>
+                    <h2>{{product.description}}</h2>
+                    <h3>{{product.price}}</h3>
+                 
+                  <!-- <hr class="style1">
+                  <h6> {{ 'by:' +blog.by}} , {{ '2 Comment' }}</h6> -->
+                  <button [routerLink]="['/product/',product._id]" >View Details</button>
+                </div>
+              </div>
+           
+        </div>
+      </div>
+      </div>
+  
+

@@ -1,0 +1,57 @@
+
+<app-header></app-header>
+<div class="col-lg-9">
+    <div class="dashboard-right">
+      <div class="dashboard addr">
+        <div class="page-title">
+          <h2>Wish List</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 wishlist-section">
+            <table class="table cart-table table-responsive-xs" *ngIf="wishList.length>0">
+              
+              <tbody>
+                <tr *ngFor="let item of wishList">
+                  
+                  <td>
+                    <img src="assets/antique/images4.jpg" class="img-fluid" alt="">
+                    <a [routerLink]="['/product/',item.antique._id]">{{item.antique.name}}</a>
+                    <div class="mobile-cart-content row">
+                      
+                      <div class="col-xs-3">
+                        <h2 class="td-color">{{item.antique.price}}</h2>
+                      </div>
+                      <div class="col-xs-3">
+                        <h2 class="td-color">
+                          <a  class="icon mr-1">
+                            <i class="ti-close"></i>
+                          </a>
+                          <a [routerLink]="['/prduct/',item.antique._id]" class="cart">
+                            <i class="ti-shopping-cart"></i>
+                          </a>
+                        </h2>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <h2>{{item.price}}</h2>
+                  </td>
+                 
+                  <td>
+                    <a  class="icon mr-3" (click)="addToWishlist(item)">
+                      <i class="ti-close"></i>
+                    </a>
+                    <a [routerLink]="['/product/',item.antique._id]" class="cart">
+                      <i class="ti-shopping-cart"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p *ngIf="wishList.length==0">You have no products in the wishlist</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>

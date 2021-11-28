@@ -1,0 +1,71 @@
+<app-header></app-header>
+<!-- section start -->
+<section class="section-b-space" *ngIf="dataLoaded">
+  <div class="container ">
+
+    <div class="checkout-page">
+      <div class="checkout-form">
+
+        <div class="row">
+         
+          <div class="col-lg-6 col-sm-12 col-xs-12">
+            <div class="checkout-details">
+              <div class="order-box">
+                <div class="title-box">
+                  <div>Product<span> Total</span></div>
+                </div>
+                <ul class="qty">
+                  <li *ngFor="let item of cartInfo.cartItems">{{item.antique.name}} × {{item.quantity}} <span>{{item.antique.price*item.quantity }}</span></li>
+                </ul>
+                <ul class="sub-total">
+                  <li>{{'Subtotal'}} <span class="count">{{cartInfo.cartTotal.subTotal}}</span></li>
+                
+                </ul>
+
+                <ul class="total">
+                  <li>{{'Total' }} <span class="count">{{cartInfo.cartTotal.grandTotal}}</span></li>
+                </ul>
+              </div>
+
+              <div class="payment-box">
+                <div class="upper-box">
+                  <div class="payment-options">
+                    <div class="title-box">
+                      <div>{{'Payment method'}}</div>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="radio-option">
+                          <input type="radio" name="payment-group" id="payment-1"  value="online">
+                          <label for="payment-1">Credit Card / Debit Card
+                          </label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="radio-option">
+                          <input type="radio" name="payment-group" id="payment-2"  value="cod">
+                          <label for="payment-2">Cash On Delivery
+                          </label>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <a (click)="placeOrder()" class="btn-solid btn">Place Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section End -->
+
+
